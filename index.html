@@ -8,8 +8,20 @@
 </head>
 <body>
     <form>
+        <!-- Missing "for"-attribute on label -->
         <label>Navn</label>
         <input id="navn" type="text">
+
+        <!-- "for"-attribute on label references "name"-attribute of input instead of "id" -->
+        <label for=“beskrivelse-2”>Beskrivelse 1</label>
+        <input name=“beskrivelse-2”>
+
+        <!-- Mismatch between "for"-attribute value on label "id"-attribute value on input -->
+        <label for=“feil-id-verdi”>Beskrivelse 2</label>
+        <input id=“beskrivelse-2”>
+
+        <!-- No associated label -->
+        <input id=“id-verdi”>
 
         <button type="submit"></button>
     </form>
